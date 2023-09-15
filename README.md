@@ -8,14 +8,6 @@
 
 </aside>
 
-## analysis_options.yaml
-
-`include: package:flutter_lints/flutter.yam`을 주석 처리 해준다. provider로 개발하는 과정에서 번거롭게 하기 때문
-
-```yaml
-# include: package:flutter_lints/flutter.yaml
-```
-
 ## ChangeNotifier
 
 ### 클래스 생성법
