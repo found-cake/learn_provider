@@ -10,8 +10,6 @@
 
 ## 목록
 
----
-
 > [analysis_options.yaml](https://www.notion.so/analysis_options-yaml-9c5ee1455be04ac999fea6c9e92d58f8?pvs=21)
 > 
 > 
@@ -50,8 +48,6 @@
 
 ## analysis_options.yaml
 
----
-
 `include: package:flutter_lints/flutter.yam`을 주석 처리 해준다. provider로 개발하는 과정에서 번거롭게 하기 때문
 
 ```yaml
@@ -59,8 +55,6 @@
 ```
 
 ## ChangeNotifier
-
----
 
 ### 클래스 생성법
 
@@ -105,11 +99,7 @@ void dispose() {
 
 ## Provider 인스턴스
 
----
-
 ### T 타입의 인스턴스 생성
-
----
 
 of에 listen이란 parameter가 있는데 이를 false를 할 경우 값이 바뀌어도 안 바뀌게 할 수 있다.
 
@@ -122,8 +112,6 @@ Provider.of<T>(context)
 ```
 
 ### Extension method
-
----
 
 | extension | original |
 | --- | --- |
@@ -145,8 +133,6 @@ Provider.of<T>(context)
 
 ## Provider
 
----
-
 위젯업데이트 필요 없을 때 사용
 
 ```dart
@@ -157,8 +143,6 @@ Provider<T>(
 ```
 
 ## ChangeNotifierProvider
-
----
 
 ChangeNotifier를 이용하여 매우 Stateful 위젯으로 setState를 해줘야하는 번거로움이 생긴다.
 
@@ -172,8 +156,6 @@ ChangeNotifierProvider<T>( //이때 T는 with ChangeNotifier
 ```
 
 ## MultiProvider
-
----
 
 ChangeNotifierProvider로 provider를 여러개 적용하려면 child안에 ChangeNotifierProvider 또 child안에 ~
 
@@ -199,8 +181,6 @@ MutiProvider(
 
 ## FutureProvider
 
----
-
 비동기로 딱 한번만 실행되어 나중에 state를 업데이트 해야할 때 사용한다. (async)
 
 ```dart
@@ -212,8 +192,6 @@ FutureProvider<T>(
 
 ## StreamProvider
 
----
-
 계속해서 바뀔때 사용된다. (async yield)
 
 ```dart
@@ -224,8 +202,6 @@ StreamProvider<T>(
 ```
 
 ## Consumer
-
----
 
 ```dart
 Consumer<T>(
@@ -244,8 +220,6 @@ Consumer<T>(
 
 ## Slector
 
----
-
 ```dart
 Selector<T, R>(
 	selector: (BuildContext context, T value) => R,
@@ -262,16 +236,12 @@ Selector<T, R>(
 
 ## Provider Access
 
----
-
 <aside>
 💡 주로 Navigator push로 다른 페이지로 넘어갈 경우 Provider가 상위 위젯에 없기 때문에 오류 발생 이때 프로바이더를 엑세스를 할 수 있도록 해줘야함
 
 </aside>
 
 ### Anonymous route
-
----
 
 ChangeNotifierProvider의 value constructor 사용
 
@@ -285,8 +255,6 @@ ChangeNotifierPoriver.value(
 ```
 
 ### Named route
-
----
 
 1. MaterialApp에서 미리 route를 지정한다.
 2. 프로버티로 ChangeNotifer 생성한다
@@ -383,8 +351,6 @@ class MyHomePage extends StatelessWidget{
 [https://github.com/found-cake/ProviderAccess](https://github.com/found-cake/ProviderAccess)
 
 ### Generated route
-
----
 
 Named route와 매우 많이 유사하다.
 
@@ -486,8 +452,6 @@ Named route와 매우 많이 유사하다.
 
 ## ProxyProvider
 
----
-
 Provider를 필요로 하는 Provider가 있을 때 사용함
 
 ```dart
@@ -499,8 +463,6 @@ ProxyProvider(
 ```
 
 ## ChangeNotiferProxyProvider
-
----
 
 ```dart
 ChangeProxyProvider<T, R>(
@@ -517,8 +479,6 @@ ChangeProxyProvider<T, R>(
 </aside>
 
 ## addPostFrameCallback
-
----
 
 state가 변경 또는 rendering 하는 도중 요청할 때 발생하는 에러를 해결하기 위한 방안
 
